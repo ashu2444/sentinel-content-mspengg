@@ -1,0 +1,12 @@
+id: 11111111-2222-3333-4444-555555555555
+name: Sample Failed Login Rule
+description: Detects failed login attempts
+severity: Medium
+status: Available
+query: |
+  SecurityEvent
+  | where EventLevelName == "Error"
+queryFrequency: 1h
+queryPeriod: 1h
+triggerOperator: GreaterThan
+triggerThreshold: 0
