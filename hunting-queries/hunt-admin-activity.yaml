@@ -1,0 +1,6 @@
+name: Hunt Admin Account Activity
+description: Identify activity from admin accounts
+query: |
+  SecurityEvent
+  | where Account has "admin"
+  | summarize Count = count() by Computer, Account
