@@ -1,0 +1,6 @@
+name: Hunt Failed Login Attempts
+description: Investigate failed login activity across the environment
+query: |
+  SecurityEvent
+  | where EventLevelName == "Error"
+  | summarize Count = count() by Account, Computer
