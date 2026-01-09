@@ -1,0 +1,11 @@
+// Parser: SecurityEvent Normalization
+// Description: Normalizes Windows SecurityEvent logs
+
+SecurityEvent
+| project
+    TimeGenerated,
+    Computer,
+    Account,
+    EventLevelName,
+    EventID,
+    Activity
